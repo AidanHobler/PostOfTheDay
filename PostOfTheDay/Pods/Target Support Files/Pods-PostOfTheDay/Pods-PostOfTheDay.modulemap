@@ -1,0 +1,6 @@
+framework module Pods_PostOfTheDay {
+  umbrella header "Pods-PostOfTheDay-umbrella.h"
+
+  export *
+  module * { export * }
+}
