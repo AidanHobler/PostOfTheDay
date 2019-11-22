@@ -17,6 +17,7 @@
 		97C1AC79238651EB00964C9F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC78238651EB00964C9F /* TodayView.swift */; };
 		97C1AC7B2386523200964C9F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC7A2386523200964C9F /* CalendarView.swift */; };
 		97C1AC7D238655A400964C9F /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC7C238655A400964C9F /* TabViewController.swift */; };
+		97C1AC7F2388776400964C9F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC7E2388776400964C9F /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		97C1AC78238651EB00964C9F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		97C1AC7A2386523200964C9F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		97C1AC7C238655A400964C9F /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		97C1AC7E2388776400964C9F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9A2A38D1DD5A35137807A70A /* Pods-PostOfTheDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostOfTheDay.debug.xcconfig"; path = "Target Support Files/Pods-PostOfTheDay/Pods-PostOfTheDay.debug.xcconfig"; sourceTree = "<group>"; };
 		EA9FC26FA244FB7A1A54697B /* Pods-PostOfTheDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostOfTheDay.release.xcconfig"; path = "Target Support Files/Pods-PostOfTheDay/Pods-PostOfTheDay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				97C1AC4623837F4D00964C9F /* AppDelegate.swift */,
+				97C1AC7E2388776400964C9F /* Post.swift */,
 				97C1AC78238651EB00964C9F /* TodayView.swift */,
 				97C1AC7A2386523200964C9F /* CalendarView.swift */,
 				97C1AC7C238655A400964C9F /* TabViewController.swift */,
@@ -332,6 +335,7 @@
 				97C1AC4B23837F4D00964C9F /* ViewController.swift in Sources */,
 				97C1AC79238651EB00964C9F /* TodayView.swift in Sources */,
 				97C1AC7B2386523200964C9F /* CalendarView.swift in Sources */,
+				97C1AC7F2388776400964C9F /* Post.swift in Sources */,
 				97C1AC7D238655A400964C9F /* TabViewController.swift in Sources */,
 				97C1AC4723837F4D00964C9F /* AppDelegate.swift in Sources */,
 			);
