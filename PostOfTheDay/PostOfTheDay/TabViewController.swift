@@ -10,17 +10,24 @@ import UIKit
 
 class TabViewController: UITabBarController {
     
-    var today: TodayView?
-    var calendar: CalendarView?
+    var today: TodayViewController?
+    var calendar: CalendarViewController?
     var tItem: UITabBarItem?
     var cItem: UITabBarItem?
-    
+    var testItem: UITabBarItem?
+    var test: ViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        today = TodayView()
-        calendar = CalendarView()
+        today = TodayViewController()
+        calendar = CalendarViewController()
+        
+        // TODO: remove this
+        test = ViewController()
+        testItem = UITabBarItem()
+        testItem?.title = "Test"
+        test?.tabBarItem = testItem
         
         tItem = UITabBarItem()
         tItem?.title = "Today"
@@ -32,7 +39,7 @@ class TabViewController: UITabBarController {
         calendar?.tabBarItem = cItem
         
         //self.viewControllers = [today!, calendar!]
-        viewControllers = [ViewController(), ViewController()]
+        viewControllers = [today!, test!]
 
         // Do any additional setup after loading the view.
     }

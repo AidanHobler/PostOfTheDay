@@ -14,10 +14,11 @@
 		97C1AC5323837F4E00964C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C1AC5123837F4E00964C9F /* LaunchScreen.storyboard */; };
 		97C1AC5E23837F4E00964C9F /* PostOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC5D23837F4E00964C9F /* PostOfTheDayTests.swift */; };
 		97C1AC6923837F4E00964C9F /* PostOfTheDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC6823837F4E00964C9F /* PostOfTheDayUITests.swift */; };
-		97C1AC79238651EB00964C9F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC78238651EB00964C9F /* TodayView.swift */; };
-		97C1AC7B2386523200964C9F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC7A2386523200964C9F /* CalendarView.swift */; };
 		97C1AC7D238655A400964C9F /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC7C238655A400964C9F /* TabViewController.swift */; };
 		97C1AC7F2388776400964C9F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC7E2388776400964C9F /* Post.swift */; };
+		97C1AC81238888CF00964C9F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC80238888CF00964C9F /* CalendarViewController.swift */; };
+		97C1AC8323888AC800964C9F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC8223888AC800964C9F /* TodayViewController.swift */; };
+		97C1AC85238890D900964C9F /* TodayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC84238890D900964C9F /* TodayViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +52,11 @@
 		97C1AC6423837F4E00964C9F /* PostOfTheDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostOfTheDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C1AC6823837F4E00964C9F /* PostOfTheDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOfTheDayUITests.swift; sourceTree = "<group>"; };
 		97C1AC6A23837F4E00964C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97C1AC78238651EB00964C9F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
-		97C1AC7A2386523200964C9F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		97C1AC7C238655A400964C9F /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		97C1AC7E2388776400964C9F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		97C1AC80238888CF00964C9F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		97C1AC8223888AC800964C9F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		97C1AC84238890D900964C9F /* TodayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewCell.swift; sourceTree = "<group>"; };
 		9A2A38D1DD5A35137807A70A /* Pods-PostOfTheDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostOfTheDay.debug.xcconfig"; path = "Target Support Files/Pods-PostOfTheDay/Pods-PostOfTheDay.debug.xcconfig"; sourceTree = "<group>"; };
 		EA9FC26FA244FB7A1A54697B /* Pods-PostOfTheDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostOfTheDay.release.xcconfig"; path = "Target Support Files/Pods-PostOfTheDay/Pods-PostOfTheDay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,9 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				97C1AC4623837F4D00964C9F /* AppDelegate.swift */,
+				97C1AC80238888CF00964C9F /* CalendarViewController.swift */,
 				97C1AC7E2388776400964C9F /* Post.swift */,
-				97C1AC78238651EB00964C9F /* TodayView.swift */,
-				97C1AC7A2386523200964C9F /* CalendarView.swift */,
+				97C1AC8223888AC800964C9F /* TodayViewController.swift */,
+				97C1AC84238890D900964C9F /* TodayViewCell.swift */,
 				97C1AC7C238655A400964C9F /* TabViewController.swift */,
 				97C1AC4A23837F4D00964C9F /* ViewController.swift */,
 				97C1AC4F23837F4E00964C9F /* Assets.xcassets */,
@@ -333,10 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C1AC4B23837F4D00964C9F /* ViewController.swift in Sources */,
-				97C1AC79238651EB00964C9F /* TodayView.swift in Sources */,
-				97C1AC7B2386523200964C9F /* CalendarView.swift in Sources */,
 				97C1AC7F2388776400964C9F /* Post.swift in Sources */,
+				97C1AC8323888AC800964C9F /* TodayViewController.swift in Sources */,
 				97C1AC7D238655A400964C9F /* TabViewController.swift in Sources */,
+				97C1AC81238888CF00964C9F /* CalendarViewController.swift in Sources */,
+				97C1AC85238890D900964C9F /* TodayViewCell.swift in Sources */,
 				97C1AC4723837F4D00964C9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

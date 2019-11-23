@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Poop"
+        title = "Test"
+        view.backgroundColor = .systemRed
         // Do any additional setup after loading the view.
     }
 
