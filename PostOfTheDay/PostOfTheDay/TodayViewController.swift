@@ -22,13 +22,16 @@ class TodayViewController: UIViewController, UITableViewDataSource {
         view.backgroundColor = .white
         title = "Today"
         
-        //let testPost = Post(text: "Wouldn't it be funny if dogs were really big, haha", likes: 10)
-        //posts.append(testPost)
+        let testPost = Post(text: "This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. ", likes: 10)
+        let testPost2 = Post(text: "This is a shorter test.", likes: 130)
+        
+        posts.append(testPost)
+        posts.append(testPost2)
         view.addSubview(table)
 
         table.dataSource = self
         table.register(TodayViewCell.self, forCellReuseIdentifier: reuseID)
-        table.estimatedRowHeight = 100
+        table.estimatedRowHeight = 200
         table.rowHeight = UITableView.automaticDimension
         
         setupConstraints()
@@ -51,6 +54,11 @@ class TodayViewController: UIViewController, UITableViewDataSource {
         cell.likes.text = String(posts[indexPath.row].likes)
         return cell
        }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+        return 400
+    }
     
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as! TodayViewCell

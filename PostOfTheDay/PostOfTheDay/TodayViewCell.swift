@@ -9,7 +9,7 @@
 import UIKit
 
 class TodayViewCell: UITableViewCell {
-    let postText = UILabel()
+    let postText = UITextView()
     let likes = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -18,9 +18,16 @@ class TodayViewCell: UITableViewCell {
         // Use marginGuide’s anchor instead of the view’s anchors so the recommended padding is utilized
         let marginGuide = contentView.layoutMarginsGuide
         
+        postText.isScrollEnabled = false
+        postText.font = UIFont.systemFont(ofSize: 14)
+        contentView.addSubview(postText)
+        contentView.addSubview(likes)
+        
         postText.snp.makeConstraints { (make) in
-            make.top.equalTo(likes.snp.top)
+            make.top.equalTo(likes.snp.bottom)
             make.left.equalTo(marginGuide.snp.left)
+            make.bottom.equalTo(marginGuide.snp.bottom)
+            make.width.equalTo(marginGuide.snp.width)
         }
         
         likes.snp.makeConstraints { (make) in
