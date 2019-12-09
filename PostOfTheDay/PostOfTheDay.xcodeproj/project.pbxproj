@@ -19,6 +19,8 @@
 		97C1AC81238888CF00964C9F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC80238888CF00964C9F /* CalendarViewController.swift */; };
 		97C1AC8323888AC800964C9F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC8223888AC800964C9F /* TodayViewController.swift */; };
 		97C1AC85238890D900964C9F /* TodayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1AC84238890D900964C9F /* TodayViewCell.swift */; };
+		CDB0D5C9239DB5CD000F2275 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0D5C8239DB5CD000F2275 /* HeaderView.swift */; };
+		CDB0D5CB239DB625000F2275 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0D5CA239DB625000F2275 /* DayCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		97C1AC8223888AC800964C9F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		97C1AC84238890D900964C9F /* TodayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewCell.swift; sourceTree = "<group>"; };
 		9A2A38D1DD5A35137807A70A /* Pods-PostOfTheDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostOfTheDay.debug.xcconfig"; path = "Target Support Files/Pods-PostOfTheDay/Pods-PostOfTheDay.debug.xcconfig"; sourceTree = "<group>"; };
+		CDB0D5C8239DB5CD000F2275 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		CDB0D5CA239DB625000F2275 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA9FC26FA244FB7A1A54697B /* Pods-PostOfTheDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostOfTheDay.release.xcconfig"; path = "Target Support Files/Pods-PostOfTheDay/Pods-PostOfTheDay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,8 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				97C1AC4623837F4D00964C9F /* AppDelegate.swift */,
-				97C1AC80238888CF00964C9F /* CalendarViewController.swift */,
 				97C1AC7E2388776400964C9F /* Post.swift */,
+				CDB0D5C8239DB5CD000F2275 /* HeaderView.swift */,
+				97C1AC80238888CF00964C9F /* CalendarViewController.swift */,
+				CDB0D5CA239DB625000F2275 /* DayCollectionViewCell.swift */,
 				97C1AC8223888AC800964C9F /* TodayViewController.swift */,
 				97C1AC84238890D900964C9F /* TodayViewCell.swift */,
 				97C1AC7C238655A400964C9F /* TabViewController.swift */,
@@ -336,12 +342,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C1AC4B23837F4D00964C9F /* ViewController.swift in Sources */,
+				CDB0D5CB239DB625000F2275 /* DayCollectionViewCell.swift in Sources */,
 				97C1AC7F2388776400964C9F /* Post.swift in Sources */,
 				97C1AC8323888AC800964C9F /* TodayViewController.swift in Sources */,
 				97C1AC7D238655A400964C9F /* TabViewController.swift in Sources */,
 				97C1AC81238888CF00964C9F /* CalendarViewController.swift in Sources */,
 				97C1AC85238890D900964C9F /* TodayViewCell.swift in Sources */,
 				97C1AC4723837F4D00964C9F /* AppDelegate.swift in Sources */,
+				CDB0D5C9239DB5CD000F2275 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
