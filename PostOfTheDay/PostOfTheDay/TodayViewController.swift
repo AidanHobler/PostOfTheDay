@@ -40,6 +40,10 @@ class TodayViewController: UIViewController, UITableViewDataSource {
         loadPosts()
     }
     
+    func displayLike() {
+        
+    }
+    
     func loadPosts() {
         NetworkManager.getPosts { (got_posts) in
             self.posts = got_posts

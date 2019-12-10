@@ -44,12 +44,10 @@ class NetworkManager {
             "username": username,
             "body": body
         ]
-        Alamofire.request(endpoint_get, method: .post, encoding: JSONEncoding.default).validate().responseData{ response in
+        Alamofire.request(endpoint_get, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseData{ response in
             switch response.result {
             case .success(let data):
-                return
-
-                
+                print("success")
                 
             case .failure(let error):
                 print(error.localizedDescription)
@@ -59,15 +57,17 @@ class NetworkManager {
     
     static func createUser(username: String, body: String) {
         let parameters: [String: Any] = [
-            "username": username,
+            "username": username
         ]
-        Alamofire.request(endpoint_user, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseData{ response in
+        Alamofire.request(endpoint_user, method: .post, parameters: parameters, encoding: URLEncoding(destination: .queryString)).validate().responseData{ response in
             switch response.result {
             case .success(_):
+                print("user created")
                 createPost(username: username, body: body)
                 
                 
-            case .failure(_):
+            case .failure(let error):
+                print(error.localizedDescription)
                 createPost(username: username, body: body)
             }
         }

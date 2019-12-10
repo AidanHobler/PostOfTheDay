@@ -11,6 +11,7 @@ import UIKit
 class TodayViewCell: UITableViewCell {
     let postText = UITextView()
     let likes = UILabel()
+    var liked = false
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
