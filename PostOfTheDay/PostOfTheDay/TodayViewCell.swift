@@ -20,6 +20,8 @@ class TodayViewCell: UITableViewCell {
         
         postText.isScrollEnabled = false
         postText.font = UIFont.systemFont(ofSize: 14)
+        postText.isEditable = false
+        
         contentView.addSubview(postText)
         contentView.addSubview(likes)
         

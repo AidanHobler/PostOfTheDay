@@ -15,7 +15,7 @@ class TabViewController: UITabBarController {
     var tItem: UITabBarItem?
     var cItem: UITabBarItem?
     var testItem: UITabBarItem?
-    var test: ViewController?
+    var test: CreatePost?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class TabViewController: UITabBarController {
         calendar = CalendarViewController()
         
         // TODO: remove this
-        test = ViewController()
+        test = CreatePost()
         testItem = UITabBarItem()
         testItem?.title = "Test"
         test?.tabBarItem = testItem

@@ -28,7 +28,7 @@ struct Post: Codable {
 
 struct PostResponseData: Codable {
     var data: [Post]
-    var success: Bool
+//    var success: Bool
 }
 
 //struct PostResponseRaw: Codable {

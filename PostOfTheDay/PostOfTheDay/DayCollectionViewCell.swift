@@ -52,7 +52,7 @@ class DayCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(for post: Post, day: Int) {
-        let postText = post.text
+        let postText = post.body_post
 
         dayLabel.text = ("December \(day)")
         detailLabel.text = postText

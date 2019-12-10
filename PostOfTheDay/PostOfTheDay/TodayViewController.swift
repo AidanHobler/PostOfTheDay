@@ -36,6 +36,17 @@ class TodayViewController: UIViewController, UITableViewDataSource {
         
         setupConstraints()
         // Do any additional setup after loading the view.
+        
+        loadPosts()
+    }
+    
+    func loadPosts() {
+        NetworkManager.getPosts { (got_posts) in
+            self.posts = got_posts
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+        }
     }
     
     func setupConstraints() {

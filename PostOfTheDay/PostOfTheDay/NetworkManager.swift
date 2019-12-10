@@ -14,27 +14,63 @@ import Alamofire
 //    case failure(error: Error)
 //}
 
-let endpoint = "http://35.229.34.48"
+let endpoint_get = "http://35.229.34.38/api/posts"
+let endpoint_user = "http://35.229.34.38/api/users"
+
 
 // How do we make network calls?
 class NetworkManager {
     static func getPosts(completion: @escaping ([Post]) -> Void) {
-        Alamofire.request(endpoint, method: .get).validate().responseJSON { response in
+        Alamofire.request(endpoint_get, method: .get).validate().responseData{ response in
             switch response.result {
             case .success(let data):
-                print("here")
-                
+
                 let jsonDecoder = JSONDecoder()
                 
-                if let postData = try? jsonDecoder.decode(PostResponseRaw.self, from: data as! Data) {
-                    let posts = postData.data.posts
+                if let postData = try? jsonDecoder.decode(PostResponseData.self, from: data) {
+                    let posts = postData.data
                     completion(posts)
                 }
                 
-//                print(data)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    
+    static func createPost(username: String, body: String) {
+        let parameters: [String: Any] = [
+            "username": username,
+            "body": body
+        ]
+        Alamofire.request(endpoint_get, method: .post, encoding: JSONEncoding.default).validate().responseData{ response in
+            switch response.result {
+            case .success(let data):
+                return
+
+                
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    static func createUser(username: String, body: String) {
+        let parameters: [String: Any] = [
+            "username": username,
+        ]
+        Alamofire.request(endpoint_user, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseData{ response in
+            switch response.result {
+            case .success(_):
+                createPost(username: username, body: body)
+                
+                
+            case .failure(_):
+                createPost(username: username, body: body)
+            }
+        }
+        
     }
 }
