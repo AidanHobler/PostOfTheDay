@@ -26,9 +26,10 @@ class CalendarViewController: UIViewController {
         calendarLayout.minimumLineSpacing = padding
         calendarLayout.minimumInteritemSpacing = padding
         
-        let testPost = Post(text: "testing test test test test test", likes: 25)
-        
-        days = [Post(text: "This is a really long test to make sure that the text will properly wrap to the next line in each day view cell.", likes: 130), testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost]
+//        let testPost = Post(body_post: "testing test test test test test", upvotes: 25)
+//
+//        days = [Post(body_post: "This is a really long test to make sure that the text will properly wrap to the next line in each day view cell.", upvotes: 130), testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost, testPost]
+        days = []
 
         calendarTable = UICollectionView(frame: .zero, collectionViewLayout: calendarLayout)
         calendarTable.backgroundColor = .white
@@ -38,6 +39,13 @@ class CalendarViewController: UIViewController {
         calendarTable.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
         calendarTable.dataSource = self
         calendarTable.delegate = self
+        
+        
+        NetworkManager.getPosts { data in
+            print("data")
+        }
+        
+//        days.append(d)
         
         setupConstraints()
     }

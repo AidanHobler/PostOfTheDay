@@ -22,11 +22,11 @@ class TodayViewController: UIViewController, UITableViewDataSource {
         view.backgroundColor = .white
         title = "Today"
         
-        let testPost = Post(text: "This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. ", likes: 10)
-        let testPost2 = Post(text: "This is a shorter test.", likes: 130)
+//        let testPost = Post(body_post: "This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. ", upvotes: 10)
+//        let testPost2 = Post(body_post: "This is a shorter test.", upvotes: 130)
         
-        posts.append(testPost)
-        posts.append(testPost2)
+//        posts.append(testPost)
+//        posts.append(testPost2)
         view.addSubview(table)
 
         table.dataSource = self
@@ -50,8 +50,8 @@ class TodayViewController: UIViewController, UITableViewDataSource {
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as! TodayViewCell
-        cell.postText.text = posts[indexPath.row].text
-        cell.likes.text = String(posts[indexPath.row].likes)
+        cell.postText.text = posts[indexPath.row].body_post
+        cell.likes.text = String(posts[indexPath.row].upvotes)
         return cell
        }
     
