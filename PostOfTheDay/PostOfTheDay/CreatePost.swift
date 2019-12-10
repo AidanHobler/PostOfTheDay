@@ -37,8 +37,14 @@ class CreatePost: UIViewController {
     func setupConstraints() {
         caption.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(12)
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
             make.height.equalTo(30)
+        }
+        input.snp.makeConstraints { (make) in
+            make.top.equalTo(caption.snp.bottom)
+        }
+        post.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
         }
     }
 

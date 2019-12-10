@@ -39,7 +39,7 @@ class TabViewController: UITabBarController {
         calendar?.tabBarItem = cItem
         
         //self.viewControllers = [today!, calendar!]
-        viewControllers = [today!, calendar!]
+        viewControllers = [today!, calendar!, test!]
 
         // Do any additional setup after loading the view.
     }
