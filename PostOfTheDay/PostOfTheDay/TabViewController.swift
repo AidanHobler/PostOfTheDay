@@ -30,7 +30,7 @@ class TabViewController: UITabBarController {
         test?.tabBarItem = testItem
         
         tItem = UITabBarItem()
-        tItem?.title = "Today"
+        tItem?.title = "Feed"
         
         cItem = UITabBarItem()
         cItem?.title = "Calendar"

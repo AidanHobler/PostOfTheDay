@@ -9,7 +9,7 @@
 import UIKit
 
 class TodayViewCell: UITableViewCell {
-    var post: Post!
+    var post: Post?
     let postText = UITextView()
     let likes = UILabel()
     var liked = false
@@ -29,7 +29,7 @@ class TodayViewCell: UITableViewCell {
         
 
         like.addTarget(self, action: #selector(like_func), for: .touchUpInside)
-        like.setTitle("Post", for: .normal)
+        like.setTitle("Like", for: .normal)
         like.backgroundColor = .white
         like.setTitleColor(.black, for: .normal)
         like.layer.borderWidth = 1
@@ -52,13 +52,14 @@ class TodayViewCell: UITableViewCell {
         }
         like.snp.makeConstraints { (make) in
             make.top.equalTo(marginGuide.snp.top)
-            make.right.equalTo(marginGuide.snp.left)
+            make.right.equalTo(marginGuide.snp.right)
             make.width.equalTo(100)
         }
     }
     
     @objc func like_func() {
-        
+        NetworkManager.upvote(id: post!.id)
+        like.backgroundColor = .systemPink
     }
 
     required init?(coder: NSCoder) {

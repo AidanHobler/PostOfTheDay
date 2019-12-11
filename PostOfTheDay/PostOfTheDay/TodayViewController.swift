@@ -113,11 +113,13 @@ class TodayViewController: UIViewController, UITableViewDataSource {
         cell.postText.text = posts[indexPath.row].body_post
         cell.likes.text = String(posts[indexPath.row].upvotes)
         let post = posts[indexPath.row]
-        if let has_been_clicked = upvoted[post.id] {
-            if (has_been_clicked) {
-                cell.likes.textColor = .systemPink
-            }
-        }
+        cell.post = post
+        cell.like.backgroundColor = .systemBlue
+//        if let has_been_clicked = upvoted[post.id] {
+//            if (has_been_clicked) {
+//                cell.likes.textColor = .systemPink
+//            }
+//        }
         // Only have access to user id number, so posts are anonymous for now
         //cell.user.text = posts[indexPath.row].username
         return cell
