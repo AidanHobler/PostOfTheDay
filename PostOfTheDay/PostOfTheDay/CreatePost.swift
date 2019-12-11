@@ -53,7 +53,11 @@ class CreatePost: UIViewController {
     }
     
     @objc func post_func() {
-        NetworkManager.createUser(username: user.text!, body: input.text!)
+        // Calls to the post user route work fine in postman, but are having trouble with alamofire
+        // For this version, we are simply posting everything to the premade user "Aidan" to at least allow
+        // post creation
+        NetworkManager.createUser(username: user.text!)
+        NetworkManager.createPost(username: "Aidan", body: input.text!)
         input.text = ""
     }
     

@@ -9,9 +9,11 @@
 import UIKit
 
 class TodayViewCell: UITableViewCell {
+    var post: Post!
     let postText = UITextView()
     let likes = UILabel()
     var liked = false
+    let like = UIButton()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,8 +25,19 @@ class TodayViewCell: UITableViewCell {
         postText.font = UIFont.systemFont(ofSize: 14)
         postText.isEditable = false
         
+        likes.textColor = .systemBlue
+        
+
+        like.addTarget(self, action: #selector(like_func), for: .touchUpInside)
+        like.setTitle("Post", for: .normal)
+        like.backgroundColor = .white
+        like.setTitleColor(.black, for: .normal)
+        like.layer.borderWidth = 1
+        like.layer.cornerRadius = 5
+        
         contentView.addSubview(postText)
         contentView.addSubview(likes)
+        contentView.addSubview(like)
         
         postText.snp.makeConstraints { (make) in
             make.top.equalTo(likes.snp.bottom)
@@ -37,8 +50,17 @@ class TodayViewCell: UITableViewCell {
             make.top.equalTo(marginGuide.snp.top)
             make.left.equalTo(marginGuide.snp.left)
         }
+        like.snp.makeConstraints { (make) in
+            make.top.equalTo(marginGuide.snp.top)
+            make.right.equalTo(marginGuide.snp.left)
+            make.width.equalTo(100)
+        }
     }
     
+    @objc func like_func() {
+        
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -41,15 +41,18 @@ class CalendarViewController: UIViewController {
         calendarTable.delegate = self
         
         
-        NetworkManager.getPosts { data in
-            print("data")
-        }
-        
-//        days.append(d)
-        
         setupConstraints()
+        loadPosts()
     }
     
+    func loadPosts() {
+        NetworkManager.getTopPosts { (got_posts) in
+            self.days = got_posts
+            DispatchQueue.main.async {
+                self.calendarTable.reloadData()
+            }
+        }
+    }
     func setupConstraints() {
         calendarTable.snp.makeConstraints { make in
             make.top.bottom.left.right.equalToSuperview()
@@ -68,6 +71,7 @@ class CalendarViewController: UIViewController {
 
 }
 
+
 extension CalendarViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return days.count
@@ -76,7 +80,7 @@ extension CalendarViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dayCellReuseIdentifier, for: indexPath) as! DayCollectionViewCell
 
-        cell.configure(for: days[indexPath.row], day: 31 - indexPath.row)
+        cell.configure(for: days[indexPath.row])
         return cell
     }
     

@@ -26,7 +26,7 @@ class TabViewController: UITabBarController {
         // TODO: remove this
         test = CreatePost()
         testItem = UITabBarItem()
-        testItem?.title = "Test"
+        testItem?.title = "Post"
         test?.tabBarItem = testItem
         
         tItem = UITabBarItem()
